@@ -54,10 +54,10 @@ describe("filterOrange", () => {
 
     test('throws on not array', () => {
         const fruit = "orange"
-        expect( () => filterOrange(fruit)).toThrow();
+        expect(() => filterOrange(fruit)).toThrow("arr.filter is not a function");
     });
 
     test('throws on undefined', () => {
-        expect( () => filterOrange(fruit)).toThrow();
+        expect(() => filterOrange(undefined)).toThrow("Cannot read property 'filter' of undefined");
     });
 })
